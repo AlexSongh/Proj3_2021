@@ -272,6 +272,8 @@ def show_pretty_table(raw_query_result):
                         j = "{:<15}".format(j)
                 elif type(j) == int:
                     j = "{:<15}".format(j)
+                elif type(j)== float and j < 1:
+                    j = "{:.0%}".format(j)
                 else:
                     j = "{:15.2f}".format(j)
                 singledata.append(j)
